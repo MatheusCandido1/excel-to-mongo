@@ -6,28 +6,29 @@ Created on Sun May 26 16:15:41 2019
 """
 
 import xlrd
-import MySQLdb
 
-book = xlrd.open_workbook("example3.xls")
 
-sheet = book.sheet_by_name("new2")
+book = xlrd.open_workbook("../sheets/Livre-Bleu/2021/livre-bleu-au-20210201.xls")
 
-database = MySQLdb.connect(host="localhost", user = "root", passwd = "root", db = "emej")
 
-cursor = database.cursor()
+# sheet = book.sheet_by_name("new2")
 
-query = """INSERT INTO cpf_cm(cpf, ej) VALUES (%s,%s)"""
+# database = MySQLdb.connect(host="localhost", user = "root", passwd = "root", db = "emej")
 
-for r in range(1, sheet.nrows):
-        cpf = sheet.cell(r,0).value 
-        ej = sheet.cell(r,1).value 
+# cursor = database.cursor()
 
-        values = (cpf,ej)
+# query = """INSERT INTO cpf_cm(cpf, ej) VALUES (%s,%s)"""
 
-        cursor.execute(query, values)
+# for r in range(1, sheet.nrows):
+#         cpf = sheet.cell(r,0).value 
+#         ej = sheet.cell(r,1).value 
+
+#         values = (cpf,ej)
+
+#         cursor.execute(query, values)
         
-cursor.close()
+# cursor.close()
 
-database.commit()
+# database.commit()
 
-database.close()
+# database.close()
