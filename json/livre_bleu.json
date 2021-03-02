@@ -1,0 +1,19 @@
+{
+    "no": 1,
+    "libellé": "Consultation du médecin généraliste et du médecin spécialiste en gériatrie",
+    "code": "C1",
+    "coefficient": 11.95,
+    "tarif": 51.00,
+    "momenclature_no": 90,
+    "nomenclature_libellé": "Médecins",
+    "partie_no": 1,
+    "partie_libellé": "ACTES GENERAUX",
+    "chapitre_no": 1,
+    "chapitre_libellé": "Consultations",
+    "section": 1,
+    "section_libellé": "Consultations normales",
+    "sous_section_no": "",
+    "sous_section_libellé": "",
+    "sous_sous_section_no": "",
+    "sous_sous_section_libellé": ""
+}

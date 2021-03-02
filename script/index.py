@@ -8,7 +8,6 @@ table = db.livre_bleu
 
 book = xlrd.open_workbook("../sheets/Livre-Bleu/2021/livre-bleu-au-20210201.xls")
 
-
 sheet = book.sheet_by_name("Nomenclature")
 
 titles = []
@@ -28,4 +27,4 @@ for row in range(1, sheet.nrows):
         register.append({titles[col]: cell})
     data.append(register)
 
-print(data)
+#print(data)
