@@ -21,10 +21,10 @@ for col in range (0, sheet.ncols):
 
 # Print cell value
 for row in range(1, sheet.nrows):
-    register = []
+    register = {}
     for col in range (0, sheet.ncols):
         cell = sheet.cell(row,col).value
-        register.append({titles[col]: cell})
+        register.update({titles[col]: cell})
     data.append(register)
 
-#print(data)
+# print(data)
