@@ -1,11 +1,6 @@
 import xlrd
 from pymongo import MongoClient
 
-client = MongoClient("mongodb+srv://admin:g7ssTrLn6rSO19Hx@cluster0.pd25u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-db = client.get_database("cmcm")
-
-table = db.livre_bleu
-
 book = xlrd.open_workbook("../sheets/Livre-Bleu/2021/livre-bleu-au-20210201.xls")
 
 sheet = book.sheet_by_name("Nomenclature")
@@ -28,4 +23,13 @@ for row in range(1, sheet.nrows):
         register.update({titles[col]: cell})
     data.append(register)
 
-# print(data)
+# Open database connection
+client = MongoClient("mongodb+srv://admin:g7ssTrLn6rSO19Hx@cluster0.pd25u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+db = client.get_database("cmcm")
+
+table = db.livre_bleu
+
+# Insert data in database
+print("Saving data...")
+callback = table.insert_many(data)
+print(callback)
