@@ -29,7 +29,11 @@ db = client.get_database("cmcm")
 
 table = db.livre_bleu
 
+# Count data in database
+#count = table.count_documents({});
+#print(count);
+
 # Insert data in database
-print("Saving data...")
-callback = table.insert_many(data)
-print(callback)
+#print("Saving data...")
+#callback = table.insert_many(data)
+#print(callback)
