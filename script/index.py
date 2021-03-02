@@ -16,7 +16,8 @@ data = []
 
 #Print columns title
 for col in range (0, sheet.ncols):
-    title = sheet.cell(0,col).value
+    columnName = sheet.cell(0,col).value
+    title = columnName.replace(" ", "_").replace("-", "_").lower()
     titles.append(title)
 
 # Print cell value
