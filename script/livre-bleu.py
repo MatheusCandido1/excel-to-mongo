@@ -33,6 +33,10 @@ print(data)
 #count = table.count_documents({});
 #print(count);
 
+# Count data in database
+#count = table.count_documents({});
+#print(count);
+
 # Insert data in database
 #print("Saving data...")
 #callback = table.insert_many(data)
