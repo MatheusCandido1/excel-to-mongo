@@ -23,13 +23,17 @@ for row in range(1, sheet.nrows):
         register.update({titles[col]: cell})
     data.append(register)
 
-# Open database connection
-client = MongoClient("mongodb+srv://admin:g7ssTrLn6rSO19Hx@cluster0.pd25u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-db = client.get_database("cmcm")
+print(data)
 
-table = db.livre_bleu
+# # Open database connection
+# client = MongoClient("mongodb+srv://admin:g7ssTrLn6rSO19Hx@cluster0.pd25u.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+# db = client.get_database("cmcm")
+
+# Count data in database
+#count = table.count_documents({});
+#print(count);
 
 # Insert data in database
-print("Saving data...")
-callback = table.insert_many(data)
-print(callback)
+#print("Saving data...")
+#callback = table.insert_many(data)
+#print(callback)
